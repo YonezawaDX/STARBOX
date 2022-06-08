@@ -1,0 +1,407 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Common">
+      <UniqueIdentifier>6b3a9f66-518f-472a-960b-454711d6ee5b</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Assets">
+      <UniqueIdentifier>305cfd3f-bb57-4e1f-b131-e45df4d323fb</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dds;dlg;fbx;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tga;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{fc7fcf1f-222c-4d14-8424-868572e5eeda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\PlayScene">
+      <UniqueIdentifier>{43e115e2-8b60-43a0-952b-78dc9914c439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\TitleScene">
+      <UniqueIdentifier>{82457628-7c47-4e1a-b66b-f7c31c8520d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries">
+      <UniqueIdentifier>{4815bf3b-80b6-4d50-b582-332fd26fac9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Libraries\MyLibraries">
+      <UniqueIdentifier>{811c2a07-d587-445e-9410-603255c1846d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{20bda224-49e4-4621-bbd2-d3720eb4e2a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Textures">
+      <UniqueIdentifier>{a7088ee9-fd00-4d18-b3f2-71b96f0dc9c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Fonts">
+      <UniqueIdentifier>{eea3c579-7cc7-4e3d-b495-74ec5c148a13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Icon">
+      <UniqueIdentifier>{e17ffd14-7217-4e09-89a0-685e2df92d2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources\Models">
+      <UniqueIdentifier>{89530e9a-e668-4911-9f24-e91850b1f232}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\PlayScene\Object">
+      <UniqueIdentifier>{e9420f1c-fde6-4630-a3a4-2efbc0dfe3d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\PlayScene\Object\BossParts">
+      <UniqueIdentifier>{061d2118-be97-4e8d-9c94-66af45c3dcc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Effects">
+      <UniqueIdentifier>{7bfc90fc-4291-4f6f-895f-9bf550dfda86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\SelectScene">
+      <UniqueIdentifier>{2845f5c1-5d10-45da-9f6c-783c459b5372}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\PlayScene\Object\BossParts02">
+      <UniqueIdentifier>{a7222a75-4df9-494d-b39a-e4f4639cf7d3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="StepTimer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceResources.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\GameMain.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\IScene.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\PlayScene.h">
+      <Filter>Game\PlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\TitleScene\TitleScene.h">
+      <Filter>Game\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Resources\Icon\Icon.h">
+      <Filter>Resources\Icon</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\IObject.h">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Object.h">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Player.h">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\MyLibraries\Model3D.h">
+      <Filter>Libraries\MyLibraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\MyLibraries\FollowCamera.h">
+      <Filter>Libraries\MyLibraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Bullet.h">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\BulletManager.h">
+      <Filter>Game\PlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Enemy.h">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\EnemyManager.h">
+      <Filter>Game\PlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Collision.h">
+      <Filter>Game\PlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\BackGround.h">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Floor.h">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\MoveObject.h">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\BossFactory.h">
+      <Filter>Game\PlayScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Body.h">
+      <Filter>Game\PlayScene\Object\BossParts</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\SmallArm.h">
+      <Filter>Game\PlayScene\Object\BossParts</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\BigArm.h">
+      <Filter>Game\PlayScene\Object\BossParts</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Boss.h">
+      <Filter>Game\PlayScene\Object\BossParts</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\MyLibraries\ResourceManager.h">
+      <Filter>Libraries\MyLibraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Score.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\UI.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\HeartObject.h">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClInclude>
+    <ClInclude Include="File.h" />
+    <ClInclude Include="Game\Effects\ShaderSample.h">
+      <Filter>Game\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Effects\BinaryFile.h">
+      <Filter>Game\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\TitleScene\TitleObject.h">
+      <Filter>Game\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\TitleScene\TitlePlane.h">
+      <Filter>Game\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\TitleScene\TitleBackground.h">
+      <Filter>Game\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\SelectScene\SelectScene.h">
+      <Filter>Game\SelectScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Effects\MyEffect.h">
+      <Filter>Game\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Effects\PostEffect.h">
+      <Filter>Game\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\SelectScene\SelectButton.h">
+      <Filter>Game\SelectScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\MyLibraries\Letter.h">
+      <Filter>Libraries\MyLibraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\SelectScene\SelectSceneLetter.h">
+      <Filter>Game\SelectScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\MyLibraries\InputManager.h">
+      <Filter>Libraries\MyLibraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Libraries\MyLibraries\Camera.h">
+      <Filter>Libraries\MyLibraries</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Boss02.h">
+      <Filter>Game\PlayScene\Object\BossParts02</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Prime.h">
+      <Filter>Game\PlayScene\Object\BossParts02</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Core.h">
+      <Filter>Game\PlayScene\Object\BossParts02</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Cover.h">
+      <Filter>Game\PlayScene\Object\BossParts02</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\SceneTransition.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Tire.h">
+      <Filter>Game\PlayScene\Object\BossParts02</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\PlayScene\Object\Hatch.h">
+      <Filter>Game\PlayScene\Object\BossParts</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Effects\AnimatedTexture.h">
+      <Filter>Game\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="Game\Effects\Fade.h">
+      <Filter>Game\Effects</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadData.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pch.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="DeviceResources.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\GameMain.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\PlayScene.cpp">
+      <Filter>Game\PlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Object.cpp">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\MyLibraries\Model3D.cpp">
+      <Filter>Libraries\MyLibraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\MyLibraries\FollowCamera.cpp">
+      <Filter>Libraries\MyLibraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Bullet.cpp">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\BulletManager.cpp">
+      <Filter>Game\PlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Enemy.cpp">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\EnemyManager.cpp">
+      <Filter>Game\PlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\BackGround.cpp">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Floor.cpp">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\MoveObject.cpp">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\BossFactory.cpp">
+      <Filter>Game\PlayScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Body.cpp">
+      <Filter>Game\PlayScene\Object\BossParts</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\SmallArm.cpp">
+      <Filter>Game\PlayScene\Object\BossParts</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\BigArm.cpp">
+      <Filter>Game\PlayScene\Object\BossParts</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Player.cpp">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Boss.cpp">
+      <Filter>Game\PlayScene\Object\BossParts</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\MyLibraries\ResourceManager.cpp">
+      <Filter>Libraries\MyLibraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Score.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\UI.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\HeartObject.cpp">
+      <Filter>Game\PlayScene\Object</Filter>
+    </ClCompile>
+    <ClCompile Include="File.cpp" />
+    <ClCompile Include="Game\Effects\ShaderSample.cpp">
+      <Filter>Game\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Effects\BinaryFile.cpp">
+      <Filter>Game\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\TitleScene\TitleObject.cpp">
+      <Filter>Game\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\TitleScene\TitlePlane.cpp">
+      <Filter>Game\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\TitleScene\TitleBackground.cpp">
+      <Filter>Game\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\SelectScene\SelectScene.cpp">
+      <Filter>Game\SelectScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\TitleScene\TitleScene.cpp">
+      <Filter>Game\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Effects\MyEffect.cpp">
+      <Filter>Game\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Effects\PostEffect.cpp">
+      <Filter>Game\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\SelectScene\SelectButton.cpp">
+      <Filter>Game\SelectScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\MyLibraries\Letter.cpp">
+      <Filter>Libraries\MyLibraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\SelectScene\SelectSceneLetter.cpp">
+      <Filter>Game\SelectScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\MyLibraries\InputManager.cpp">
+      <Filter>Libraries\MyLibraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Libraries\MyLibraries\Camera.cpp">
+      <Filter>Libraries\MyLibraries</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Boss02.cpp">
+      <Filter>Game\PlayScene\Object\BossParts02</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Prime.cpp">
+      <Filter>Game\PlayScene\Object\BossParts02</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Core.cpp">
+      <Filter>Game\PlayScene\Object\BossParts02</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Cover.cpp">
+      <Filter>Game\PlayScene\Object\BossParts02</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\SceneTransition.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Tire.cpp">
+      <Filter>Game\PlayScene\Object\BossParts02</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\PlayScene\Object\Hatch.cpp">
+      <Filter>Game\PlayScene\Object\BossParts</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Effects\AnimatedTexture.cpp">
+      <Filter>Game\Effects</Filter>
+    </ClCompile>
+    <ClCompile Include="Game\Effects\Fade.cpp">
+      <Filter>Game\Effects</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+    <ResourceCompile Include="Resources\Icon\Icon.rc">
+      <Filter>Resources\Icon</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Textures\TridentLogo.png">
+      <Filter>Resources\Textures</Filter>
+    </Image>
+    <Image Include="Resources\Icon\Icon.ico">
+      <Filter>Resources\Icon</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="settings.manifest">
+      <Filter>Assets</Filter>
+    </Manifest>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fonts\myfile.spritefont">
+      <Filter>Resources\Fonts</Filter>
+    </None>
+    <None Include="Resources\Fonts\SegoeUI_18.spritefont">
+      <Filter>Resources\Fonts</Filter>
+    </None>
+    <None Include="Game\Effects\Particle.hlsli">
+      <Filter>Game\Effects</Filter>
+    </None>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Game\Effects\FadePS.hlsl">
+      <Filter>Game\Effects</Filter>
+    </FxCompile>
+    <FxCompile Include="Game\Effects\ParticleGS.hlsl">
+      <Filter>Game\Effects</Filter>
+    </FxCompile>
+    <FxCompile Include="Game\Effects\ParticlePS.hlsl">
+      <Filter>Game\Effects</Filter>
+    </FxCompile>
+    <FxCompile Include="Game\Effects\ParticleVS.hlsl">
+      <Filter>Game\Effects</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <RootNamespace>GameAppTemplate</RootNamespace>
+    <ProjectGuid>{283fddd2-a661-4cdb-87ff-82dfd660df30}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>StarBox</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <PreferredToolArchitecture>x64</PreferredToolArchitecture>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.props" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\MeshContentTask.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(ProjectDir)\Libraries\DirectXTK\Inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\Libraries\DirectXTK\Lib\Debug;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(ProjectDir)\Libraries\DirectXTK\Inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)\Libraries\DirectXTK\Lib\Release;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;DirectXTK.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
+    <MeshContentTask>
+      <ContentOutput>Resources\Models\%(Filename).cmo</ContentOutput>
+    </MeshContentTask>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(ProjectDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>d3d11.lib;dxgi.lib;dxguid.lib;uuid.lib;kernel32.lib;user32.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;DirectXTK.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <Manifest>
+      <EnableDpiAwareness>PerMonitorHighDPIAware</EnableDpiAwareness>
+    </Manifest>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="DeviceResources.h" />
+    <ClInclude Include="File.h" />
+    <ClInclude Include="Game.h" />
+    <ClInclude Include="Game\Effects\AnimatedTexture.h" />
+    <ClInclude Include="Game\Effects\BinaryFile.h" />
+    <ClInclude Include="Game\Effects\Fade.h" />
+    <ClInclude Include="Game\Effects\MyEffect.h" />
+    <ClInclude Include="Game\Effects\PostEffect.h" />
+    <ClInclude Include="Game\Effects\ShaderSample.h" />
+    <ClInclude Include="Game\GameMain.h" />
+    <ClInclude Include="Game\IScene.h" />
+    <ClInclude Include="Game\PlayScene\BossFactory.h" />
+    <ClInclude Include="Game\PlayScene\BulletManager.h" />
+    <ClInclude Include="Game\PlayScene\Collision.h" />
+    <ClInclude Include="Game\PlayScene\EnemyManager.h" />
+    <ClInclude Include="Game\PlayScene\Object\BackGround.h" />
+    <ClInclude Include="Game\PlayScene\Object\BigArm.h" />
+    <ClInclude Include="Game\PlayScene\Object\Body.h" />
+    <ClInclude Include="Game\PlayScene\Object\Boss.h" />
+    <ClInclude Include="Game\PlayScene\Object\Boss02.h" />
+    <ClInclude Include="Game\PlayScene\Object\Bullet.h" />
+    <ClInclude Include="Game\PlayScene\Object\Core.h" />
+    <ClInclude Include="Game\PlayScene\Object\Cover.h" />
+    <ClInclude Include="Game\PlayScene\Object\Enemy.h" />
+    <ClInclude Include="Game\PlayScene\Object\Floor.h" />
+    <ClInclude Include="Game\PlayScene\Object\Hatch.h" />
+    <ClInclude Include="Game\PlayScene\Object\HeartObject.h" />
+    <ClInclude Include="Game\PlayScene\Object\IObject.h" />
+    <ClInclude Include="Game\PlayScene\Object\MoveObject.h" />
+    <ClInclude Include="Game\PlayScene\Object\Object.h" />
+    <ClInclude Include="Game\PlayScene\Object\Player.h" />
+    <ClInclude Include="Game\PlayScene\Object\Prime.h" />
+    <ClInclude Include="Game\PlayScene\Object\SmallArm.h" />
+    <ClInclude Include="Game\PlayScene\Object\Tire.h" />
+    <ClInclude Include="Game\PlayScene\PlayScene.h" />
+    <ClInclude Include="Game\PlayScene\UI.h" />
+    <ClInclude Include="Game\SceneTransition.h" />
+    <ClInclude Include="Game\Score.h" />
+    <ClInclude Include="Game\SelectScene\SelectButton.h" />
+    <ClInclude Include="Game\SelectScene\SelectScene.h" />
+    <ClInclude Include="Game\SelectScene\SelectSceneLetter.h" />
+    <ClInclude Include="Game\TitleScene\TitleBackground.h" />
+    <ClInclude Include="Game\TitleScene\TitleObject.h" />
+    <ClInclude Include="Game\TitleScene\TitlePlane.h" />
+    <ClInclude Include="Game\TitleScene\TitleScene.h" />
+    <ClInclude Include="Libraries\MyLibraries\Camera.h" />
+    <ClInclude Include="Libraries\MyLibraries\FollowCamera.h" />
+    <ClInclude Include="Libraries\MyLibraries\InputManager.h" />
+    <ClInclude Include="Libraries\MyLibraries\Letter.h" />
+    <ClInclude Include="Libraries\MyLibraries\Model3D.h" />
+    <ClInclude Include="Libraries\MyLibraries\ResourceManager.h" />
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="ReadData.h" />
+    <ClInclude Include="Resources\Icon\Icon.h" />
+    <ClInclude Include="StepTimer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DeviceResources.cpp" />
+    <ClCompile Include="File.cpp" />
+    <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Game\Effects\AnimatedTexture.cpp" />
+    <ClCompile Include="Game\Effects\BinaryFile.cpp" />
+    <ClCompile Include="Game\Effects\Fade.cpp" />
+    <ClCompile Include="Game\Effects\MyEffect.cpp" />
+    <ClCompile Include="Game\Effects\PostEffect.cpp" />
+    <ClCompile Include="Game\Effects\ShaderSample.cpp" />
+    <ClCompile Include="Game\GameMain.cpp" />
+    <ClCompile Include="Game\PlayScene\BossFactory.cpp" />
+    <ClCompile Include="Game\PlayScene\BulletManager.cpp" />
+    <ClCompile Include="Game\PlayScene\EnemyManager.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\BackGround.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\BigArm.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Body.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Boss.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Boss02.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Bullet.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Core.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Cover.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Enemy.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Floor.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Hatch.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\HeartObject.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\MoveObject.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Object.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Player.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Prime.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\SmallArm.cpp" />
+    <ClCompile Include="Game\PlayScene\Object\Tire.cpp" />
+    <ClCompile Include="Game\PlayScene\PlayScene.cpp" />
+    <ClCompile Include="Game\PlayScene\UI.cpp" />
+    <ClCompile Include="Game\SceneTransition.cpp" />
+    <ClCompile Include="Game\Score.cpp" />
+    <ClCompile Include="Game\SelectScene\SelectButton.cpp" />
+    <ClCompile Include="Game\SelectScene\SelectScene.cpp" />
+    <ClCompile Include="Game\SelectScene\SelectSceneLetter.cpp" />
+    <ClCompile Include="Game\TitleScene\TitleBackground.cpp" />
+    <ClCompile Include="Game\TitleScene\TitleObject.cpp" />
+    <ClCompile Include="Game\TitleScene\TitlePlane.cpp" />
+    <ClCompile Include="Game\TitleScene\TitleScene.cpp" />
+    <ClCompile Include="Libraries\MyLibraries\Camera.cpp" />
+    <ClCompile Include="Libraries\MyLibraries\FollowCamera.cpp" />
+    <ClCompile Include="Libraries\MyLibraries\InputManager.cpp" />
+    <ClCompile Include="Libraries\MyLibraries\Letter.cpp" />
+    <ClCompile Include="Libraries\MyLibraries\Model3D.cpp" />
+    <ClCompile Include="Libraries\MyLibraries\ResourceManager.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="resource.rc" />
+    <ResourceCompile Include="Resources\Icon\Icon.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Icon\Icon.ico" />
+    <Image Include="Resources\Textures\TridentLogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Manifest Include="settings.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="Game\Effects\Particle.hlsli" />
+    <None Include="Resources\Fonts\myfile.spritefont" />
+    <None Include="Resources\Fonts\SegoeUI_18.spritefont" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Game\Effects\FadePS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0_level_9_3</ShaderModel>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Resources\Shaders\%(Filename).cso</ObjectFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Game\Effects\ParticleGS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Geometry</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Resources\Shaders\%(Filename).cso</ObjectFileOutput>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">4.0</ShaderModel>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Geometry</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Game\Effects\ParticlePS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Resources\Shaders\%(Filename).cso</ObjectFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Game\Effects\ParticleVS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ObjectFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Resources\Shaders\%(Filename).cso</ObjectFileOutput>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\ImageContentTask.targets" />
+    <Import Project="$(VCTargetsPath)\BuildCustomizations\MeshContentTask.targets" />
+  </ImportGroup>
+</Project>
